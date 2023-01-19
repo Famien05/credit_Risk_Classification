@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/8ae1a65488fc433cbd2355188be34db0/artifacts
+end_time: 1674073761425
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8ae1a65488fc433cbd2355188be34db0
+run_name: auspicious-sow-815
+run_uuid: 8ae1a65488fc433cbd2355188be34db0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674073718088
+status: 3
+tags: []
+user_id: hp

@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/52ac2bfefe724896b1bd195c1ec984ab/artifacts
+end_time: 1674067377454
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 52ac2bfefe724896b1bd195c1ec984ab
+run_name: mysterious-crow-11
+run_uuid: 52ac2bfefe724896b1bd195c1ec984ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674067341747
+status: 3
+tags: []
+user_id: hp

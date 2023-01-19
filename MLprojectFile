@@ -1,0 +1,7 @@
+name: projetData
+
+conda_env: src/config/projetData.yaml
+
+entry_points:
+  main:
+    command: "python sr/models/predict_model.py"

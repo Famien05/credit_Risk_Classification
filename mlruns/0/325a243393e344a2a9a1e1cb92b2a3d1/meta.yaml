@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/325a243393e344a2a9a1e1cb92b2a3d1/artifacts
+end_time: 1674063804369
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 325a243393e344a2a9a1e1cb92b2a3d1
+run_name: intelligent-calf-263
+run_uuid: 325a243393e344a2a9a1e1cb92b2a3d1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674063765913
+status: 3
+tags: []
+user_id: hp
