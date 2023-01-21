@@ -20,7 +20,23 @@ def predict_model(model,X_test):
     print(df)
     return df
 
-train_data, test_data = dataPrep('src\data\pplication_train.csv','src\data\pplication_test.csv')
+traincsv = mlflow.get_param("traincsv")
+testcsv = mlflow.get_param("testcsv")
+
+
+seed = mlflow.get_param("seed")
+n_jobs=mlflow.get_param("n_jobs")
+base_score=mlflow.get_param("base_score")
+booster=mlflow.get_param("booster")
+gamma=mlflow.get_param("gamma")
+learning_rate= mlflow.get_param("learning_rate")
+reg_alpha=mlflow.get_param("reg_alpha")
+reg_lambda= mlflow.get_param("reg_lambda")
+eval_metric= mlflow.get_param("eval_metric")
+
+# traincsv = 'src\data\pplication_train.csv'
+# testcsv= 'src\data\pplication_test.csv'
+train_data, test_data = dataPrep(traincsv,testcsv)
 train_data = featureEng(train_data)
 test_data = featureEng( test_data)
 model,X = train_model(train_data)
@@ -29,3 +45,4 @@ model,X = train_model(train_data)
 test_data.drop(columns=[col for col in test_data.columns if col not in X.columns], inplace=True)
 
 predict_model(model,test_data)
+
