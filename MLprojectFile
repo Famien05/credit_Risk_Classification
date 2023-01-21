@@ -2,6 +2,48 @@ name: projetData
 
 conda_env: src/config/projetData.yaml
 
+
 entry_points:
   main:
-    command: "python sr/models/predict_model.py"
+    parameters:
+      - name: train_path
+        type: path
+        default: models/model.csv
+      - name: test_path
+        type: path
+        default: data/input.csv
+      - name: seed
+        type: int
+        default: 123
+      - name: n_jobs
+        type: float
+        default: -1
+      - name: gamma
+        type: float
+        default: 0.3
+      - name: learning_rate
+        type: float
+        default: 0.1
+      - name: base_score
+        type: float
+        default: 0.2
+      - name: reg_alpha
+        type: float
+        default: 1
+      - name: reg_lambda
+        type: float
+        default: 0.50
+      - name: booster
+        type: str
+        default: 'gbtree' 
+      - name: eval_metric
+        type: str
+        default: 'mlogloss' 
+
+
+    command: "python predict_model.py --train_path {train_path} --test_path {test_path} --seed {seed} --n_jobs {n_jobs} --gamma {gamma} --learning_rate {learning_rate} --base_score {base_score} --reg_alpha {reg_alpha} --reg_lambda {reg_lambda} --booster {booster} --eval_metric {eval_metric} "
+
+
+
+
+
