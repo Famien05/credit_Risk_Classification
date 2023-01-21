@@ -6,6 +6,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import numpy as np 
 
+seed = 123
+n_jobs=-1
+base_score=0.2
+booster= 'gbtree'
+gamma= 0.3
+learning_rate= 0.1
+reg_alpha= 1
+reg_lambda= 0.50
+eval_metric='mlogloss'
 
 def train_model(train_data):
     # Find correlations
@@ -35,15 +44,15 @@ def train_model(train_data):
     # Start an MLflow run
     with mlflow.start_run():
         # Create an XGBoost model
-        model = xgb.XGBClassifier(seed = 123,
-            n_jobs=-1,
-            base_score=0.2,
-            booster= 'gbtree',
-            gamma= 0.3,
-            learning_rate= 0.1,
-            reg_alpha= 1,
-            reg_lambda= 0.50,
-            eval_metric='mlogloss')
+        model = xgb.XGBClassifier(seed = seed ,
+            n_jobs=n_jobs,
+            base_score=base_score,
+            booster= booster,
+            gamma=gamma,
+            learning_rate= learning_rate,
+            reg_alpha= reg_alpha,
+            reg_lambda= reg_lambda,
+            eval_metric=eval_metric)
 
         # Fit the model on the training data
         model.fit(X_train, y_train)
@@ -64,14 +73,14 @@ def train_model(train_data):
 
         # Log the model and evaluation metrics
         mlflow.xgboost.log_model(model, "model")
-        mlflow.log_param("seed", 123)
-        mlflow.log_param("n_jobs", -1)
-        mlflow.log_param("base_score", 0.2)
-        mlflow.log_param("booster", "gbtree")
-        mlflow.log_param("gamma", 0.3)
-        mlflow.log_param("learning_rate", 0.1)
-        mlflow.log_param("reg_alpha", 1)
-        mlflow.log_param("reg_lambda", 0.5)
+        mlflow.log_param("seed", seed)
+        mlflow.log_param("n_jobs", n_jobs)
+        mlflow.log_param("base_score", base_score)
+        mlflow.log_param("booster", booster)
+        mlflow.log_param("gamma", gamma)
+        mlflow.log_param("learning_rate", learning_rate)
+        mlflow.log_param("reg_alpha",reg_alpha)
+        mlflow.log_param("reg_lambda", reg_lambda)
         mlflow.log_metric("accuracy", acc)
         mlflow.log_metric("precision", prec)
         mlflow.log_metric("recall", rec)
