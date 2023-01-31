@@ -25,9 +25,7 @@ Project Organization
     ├── mlruns          <- Track parameters & metrics of your model and display the results in your local 
     │                           mlflow UI
     │                         
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── notebooks          <- for test code and SHAP Explanations`.
     │
     ├── Output            <- output of project
     │   └── figures        <- Generated graphics and figures 
