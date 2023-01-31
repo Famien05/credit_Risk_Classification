@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/26f40ed9b2bb47548756ff5e2dd75492/artifacts
+end_time: 1674993864643
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 26f40ed9b2bb47548756ff5e2dd75492
+run_name: puzzled-gnu-318
+run_uuid: 26f40ed9b2bb47548756ff5e2dd75492
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674993833140
+status: 3
+tags: []
+user_id: hp

@@ -1,0 +1,45 @@
+
+<div ALIGN="center">
+
+<form action="{{ url_for('flask_predict') }}" method="post" enctype="multipart/form-data">
+    <br>
+    <label>Upload a train csv</label>
+    <br>
+    <input type="file" name="train_path" required="ce champ est exigé">
+    <br>
+    <label>Upload a test csv</label>
+    <br>
+    <input type="file" name="test_path" required="ce champ est exigé">
+    <br>
+    <label>Enter a seed</label>
+    <br>
+    <input type="number" name="seed">
+    <br>
+    <label>Enter a n_jobs</label>
+    <br>
+    <input type="number" name="n_jobs">
+    <br>
+    <label>Enter a gamma</label>
+    <br>
+    <input type="number" name="gamma">
+    <br>
+    <label>Enter a learning_rate</label>
+    <br>
+    <input type="number" name="learning_rate">
+    <br>
+    <label>Enter a base_score</label>
+    <br>
+    <input type="number" name="base_score">
+    <br>
+    <label>Enter a reg_alpha</label>
+    <br>
+    <input type="number" name="reg_alpha">
+    <br>
+    <label>Enter a reg_lambda</label>
+    <br>
+    <input type="number" name="reg_lambda">
+    <br>
+    <input type="submit" value="Valider">
+
+</form>
+</div>

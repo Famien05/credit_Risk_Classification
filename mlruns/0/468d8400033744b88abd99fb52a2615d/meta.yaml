@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/468d8400033744b88abd99fb52a2615d/artifacts
+end_time: 1674996500925
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 468d8400033744b88abd99fb52a2615d
+run_name: abundant-skink-297
+run_uuid: 468d8400033744b88abd99fb52a2615d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674996474951
+status: 3
+tags: []
+user_id: hp

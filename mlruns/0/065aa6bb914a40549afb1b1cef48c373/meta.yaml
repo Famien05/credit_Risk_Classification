@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/065aa6bb914a40549afb1b1cef48c373/artifacts
+end_time: 1675002529133
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 065aa6bb914a40549afb1b1cef48c373
+run_name: useful-fawn-694
+run_uuid: 065aa6bb914a40549afb1b1cef48c373
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675002488786
+status: 3
+tags: []
+user_id: hp

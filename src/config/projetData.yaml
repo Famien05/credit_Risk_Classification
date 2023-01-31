@@ -25,7 +25,7 @@ dependencies:
   - brotlipy=0.7.0=py310h2bbff1b_1002
   - bzip2=1.0.8=he774522_0
   - c-ares=1.18.1=h2bbff1b_0
-  - ca-certificates=2022.10.11=haa95532_0
+  - ca-certificates=2023.01.10=haa95532_0
   - certifi=2022.12.7=py310haa95532_0
   - cffi=1.15.1=py310h2bbff1b_3
   - chardet=4.0.0=py310haa95532_1003
@@ -115,6 +115,7 @@ dependencies:
   - pysocks=1.7.1=py310haa95532_0
   - python=3.10.9=h966fe2a_0
   - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - python-dotenv=0.21.0=py310haa95532_0
   - python-slugify=5.0.2=pyhd3eb1b0_0
   - python_abi=3.10=2_cp310
   - pytz=2022.7=py310haa95532_0
@@ -166,7 +167,8 @@ dependencies:
   - zstd=1.5.2=h19a0ad4_0
   - pip:
       - joblib==1.2.0
+      - plotly==5.13.0
       - scipy==1.10.0
+      - tenacity==8.1.0
       - threadpoolctl==3.1.0
       - xgboost==1.7.3
-

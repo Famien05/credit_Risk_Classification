@@ -22,6 +22,9 @@ Project Organization
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
+    ├── mlruns          <- Track parameters & metrics of your model and display the results in your local 
+    │                           mlflow UI
+    │                         
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
@@ -35,14 +38,24 @@ Project Organization
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
+    │   │              
+    │   ├── templates         <- code html for deployment of flask server 
+    │   │   ├── index.html
+    │   │   └── prediction.html
     │   │
     │   ├── models         <- Scripts to prepare and train models and then use trained models to make
     │   │   │                 predictions
     │   │   ├── dataPrep_model.py
     │   │   └── featureEng.py
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    │   │   ├── app.py      <- Flask server with prediction's function                    
+    │   │   └── train_model.py
+    │   │
+    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.
+    │   
+    │   
+    └── MLproject      <- Package your code in a reusable and reproducible model format with ML Flow projects
+
+
 
 
 --------

@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/e243e130299747b4b8e86c0ea8971106/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e243e130299747b4b8e86c0ea8971106
+run_name: grandiose-carp-866
+run_uuid: e243e130299747b4b8e86c0ea8971106
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674340491073
+status: 1
+tags: []
+user_id: hp

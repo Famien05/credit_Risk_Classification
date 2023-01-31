@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/008295f017494a52add3d6e5edbeb9cc/artifacts
+end_time: 1674990926012
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 008295f017494a52add3d6e5edbeb9cc
+run_name: casual-robin-920
+run_uuid: 008295f017494a52add3d6e5edbeb9cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674990822850
+status: 3
+tags: []
+user_id: hp

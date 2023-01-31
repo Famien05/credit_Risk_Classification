@@ -5,40 +5,32 @@ import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import numpy as np 
+import shap
+import matplotlib.pyplot as plt
+import os
 
-seed = 123
-n_jobs=-1
-base_score=0.2
-booster= 'gbtree'
-gamma= 0.3
-learning_rate= 0.1
-reg_alpha= 1
-reg_lambda= 0.50
-eval_metric='mlogloss'
+def train_model(X,y, seed, n_jobs, gamma, learning_rate, base_score, reg_alpha, reg_lambda, booster, eval_metric):
+    """
+    This function trains an XGBoost model using the input features `X` and labels `y`. The model is trained using the specified hyperparameters and evaluated using accuracy, precision, recall, and F1 score. The trained model, along with the hyperparameters and evaluation metrics, are logged to MLflow for tracking and comparison purposes.
+    
+    Parameters:
+    - X (pandas.DataFrame or numpy.ndarray): Input features for the model
+    - y (pandas.Series or numpy.ndarray): Labels for the model
+    - seed (int): Seed used for random number generation
+    - n_jobs (int): Number of parallel jobs to run (default=1)
+    - gamma (float): Minimum loss reduction required to make a further partition on a leaf node of the tree
+    - learning_rate (float): Step size shrinkage used in updates to prevent overfitting
+    - base_score (float): The initial prediction score of all instances, global bias
+    - reg_alpha (float): L1 regularization term on weights
+    - reg_lambda (float): L2 regularization term on weights
+    - booster (str): Specifies which booster to use: gbtree, gblinear or dart
+    - eval_metric (str): Evaluation metric(s) to be used for early stopping
 
-def train_model(train_data):
-    # Find correlations
-    corr = train_data.corr()
-    # Select highly correlated features
-    high_corr = corr[((corr > 0.05) | (corr < -0.05)) & (corr < 1) ]
-    # For each feature, list its correlated feature
-    correlated_columns = {}
-    for col in high_corr.columns:
-        correlated_features = high_corr.columns[(~high_corr[col].isna())].tolist()
-        correlated_features = list(set(correlated_features).difference(set(correlated_columns.keys())))
-        correlated_columns[col] = correlated_features
-    # From correlated features with TARGET, select their top 3 correlated features
-    selected_features = correlated_columns["TARGET"]
-    for feature in selected_features.copy():
-        correlated_correlated_features = high_corr[feature].abs().sort_values(ascending=False)
+    Returns:
+    - model (xgboost.Booster or xgboost.XGBClassifier): Trained XGBoost model
+    - X (pandas.DataFrame or numpy.ndarray): Input features for the model
 
-        features_to_select = correlated_correlated_features[correlated_correlated_features < 90][:3].index.tolist()
-        selected_features.extend(features_to_select)
-    X = train_data.loc[:, np.unique(selected_features)].drop(columns="TARGET")
-    y = train_data.loc[:, "TARGET"]
-
-
-
+    """
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     # Start an MLflow run
@@ -59,6 +51,8 @@ def train_model(train_data):
 
         # Make predictions on the test set
         y_pred = model.predict(X_test)
+        
+      
 
         # Evaluate the model
         acc = accuracy_score(y_test, y_pred)
@@ -85,5 +79,6 @@ def train_model(train_data):
         mlflow.log_metric("precision", prec)
         mlflow.log_metric("recall", rec)
         mlflow.log_metric("f1_score", f1)
+
 
     return model,X

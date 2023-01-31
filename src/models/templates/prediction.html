@@ -1,0 +1,16 @@
+<a>mlflow_ui_url</a>
+<table>
+    <tr>
+      <th>Index</th>
+      <th>Prediction</th>
+    </tr>
+    {% for index in range(prediction|length) %}
+    <tr>
+      <td>{{ index }}</td>
+      <td>{{ prediction[index] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+
+  

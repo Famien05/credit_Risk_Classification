@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/fe7a94819b4648d7b1cf5c40eec92efc/artifacts
+end_time: 1675114126640
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fe7a94819b4648d7b1cf5c40eec92efc
+run_name: resilient-panda-507
+run_uuid: fe7a94819b4648d7b1cf5c40eec92efc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675114057448
+status: 3
+tags: []
+user_id: hp
