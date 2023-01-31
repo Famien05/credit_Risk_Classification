@@ -41,7 +41,7 @@ entry_points:
         default: 'mlogloss' 
 
 
-    command: "python predict_model.py --train_path {train_path} --test_path {test_path} --seed {seed} --n_jobs {n_jobs} --gamma {gamma} --learning_rate {learning_rate} --base_score {base_score} --reg_alpha {reg_alpha} --reg_lambda {reg_lambda} --booster {booster} --eval_metric {eval_metric} "
+    command: "python predict_model.py "
 
 
 
