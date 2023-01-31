@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/0ee337efc9854378a3b349dad6694e9e/artifacts
+end_time: 1674995280666
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0ee337efc9854378a3b349dad6694e9e
+run_name: useful-hog-25
+run_uuid: 0ee337efc9854378a3b349dad6694e9e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674995244092
+status: 3
+tags: []
+user_id: hp

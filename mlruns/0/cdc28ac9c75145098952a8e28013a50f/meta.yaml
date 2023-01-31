@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/cdc28ac9c75145098952a8e28013a50f/artifacts
+end_time: 1674386456188
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cdc28ac9c75145098952a8e28013a50f
+run_name: sassy-pug-175
+run_uuid: cdc28ac9c75145098952a8e28013a50f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674386427865
+status: 3
+tags: []
+user_id: hp

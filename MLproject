@@ -1,0 +1,22 @@
+name: projetData
+
+conda_env: src/config/projetData.yaml
+
+
+entry_points:
+  main:
+    parameters:
+      train_path: {type: path, default: models/model.csv}
+      test_path: {type: path, default: data/input.csv}
+      seed: {type: int, default: 123}
+      gamma: {type: float, default: 0.3}
+      learning_rate: {type: float, default: 0.1}
+      base_score: {type: float, default: 0.2}
+      reg_alpha: {type: float, default: 1}
+      reg_lambda: {type: float, default: 0.50}
+      booster: {type: str, default: 'gbtree' }
+      eval_metric: {type: str, default: 'mlogloss' }
+
+    command: "python src/models/app.py " 
+
+

@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/278e93ada7a8458eb126b84a0c42e2d7/artifacts
+end_time: 1675028125735
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 278e93ada7a8458eb126b84a0c42e2d7
+run_name: kindly-shark-932
+run_uuid: 278e93ada7a8458eb126b84a0c42e2d7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675027988702
+status: 3
+tags: []
+user_id: hp

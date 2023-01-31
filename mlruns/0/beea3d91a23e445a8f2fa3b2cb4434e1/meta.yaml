@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/beea3d91a23e445a8f2fa3b2cb4434e1/artifacts
+end_time: 1674992277757
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: beea3d91a23e445a8f2fa3b2cb4434e1
+run_name: honorable-gull-997
+run_uuid: beea3d91a23e445a8f2fa3b2cb4434e1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674992241747
+status: 3
+tags: []
+user_id: hp

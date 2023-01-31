@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/cd4f886b0b8e492e9275d46d990e3f31/artifacts
+end_time: 1675028336540
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cd4f886b0b8e492e9275d46d990e3f31
+run_name: merciful-fox-353
+run_uuid: cd4f886b0b8e492e9275d46d990e3f31
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675028299785
+status: 3
+tags: []
+user_id: hp

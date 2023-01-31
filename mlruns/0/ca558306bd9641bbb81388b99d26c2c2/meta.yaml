@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/ca558306bd9641bbb81388b99d26c2c2/artifacts
+end_time: 1674385947601
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca558306bd9641bbb81388b99d26c2c2
+run_name: wise-goose-498
+run_uuid: ca558306bd9641bbb81388b99d26c2c2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674385909067
+status: 3
+tags: []
+user_id: hp

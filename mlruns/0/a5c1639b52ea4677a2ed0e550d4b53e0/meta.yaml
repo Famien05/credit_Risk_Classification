@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/a5c1639b52ea4677a2ed0e550d4b53e0/artifacts
+end_time: 1674991103870
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a5c1639b52ea4677a2ed0e550d4b53e0
+run_name: receptive-dove-71
+run_uuid: a5c1639b52ea4677a2ed0e550d4b53e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674991030708
+status: 3
+tags: []
+user_id: hp

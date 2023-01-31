@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/c7aecfcc76a248fc9bb7570da2f7936a/artifacts
+end_time: 1674990266699
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c7aecfcc76a248fc9bb7570da2f7936a
+run_name: omniscient-deer-809
+run_uuid: c7aecfcc76a248fc9bb7570da2f7936a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674990221944
+status: 3
+tags: []
+user_id: hp

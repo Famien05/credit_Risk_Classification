@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/b77084b58f6446adbdf12a703336dc61/artifacts
+end_time: 1675024835268
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b77084b58f6446adbdf12a703336dc61
+run_name: selective-shoat-368
+run_uuid: b77084b58f6446adbdf12a703336dc61
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675024799467
+status: 3
+tags: []
+user_id: hp

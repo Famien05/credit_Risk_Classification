@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/41511ec24a684ecb89a52f3d0e207497/artifacts
+end_time: 1674389131674
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 41511ec24a684ecb89a52f3d0e207497
+run_name: glamorous-pig-962
+run_uuid: 41511ec24a684ecb89a52f3d0e207497
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674389102587
+status: 3
+tags: []
+user_id: hp

@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/7b947a9b29b54e9c97e156b1899ece4f/artifacts
+end_time: 1675108744742
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7b947a9b29b54e9c97e156b1899ece4f
+run_name: magnificent-kite-730
+run_uuid: 7b947a9b29b54e9c97e156b1899ece4f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675108702926
+status: 3
+tags: []
+user_id: hp

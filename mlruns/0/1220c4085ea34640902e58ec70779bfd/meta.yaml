@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/1220c4085ea34640902e58ec70779bfd/artifacts
+end_time: 1675028670801
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1220c4085ea34640902e58ec70779bfd
+run_name: skillful-mole-820
+run_uuid: 1220c4085ea34640902e58ec70779bfd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675028632314
+status: 3
+tags: []
+user_id: hp

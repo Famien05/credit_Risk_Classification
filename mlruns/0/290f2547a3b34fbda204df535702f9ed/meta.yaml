@@ -1,0 +1,15 @@
+artifact_uri: file:///H:/M2/app%20of%20big%20data/projet/credit_Risk_Classification/mlruns/0/290f2547a3b34fbda204df535702f9ed/artifacts
+end_time: 1674389519674
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 290f2547a3b34fbda204df535702f9ed
+run_name: fun-boar-613
+run_uuid: 290f2547a3b34fbda204df535702f9ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674389490290
+status: 3
+tags: []
+user_id: hp
