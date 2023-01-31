@@ -6,8 +6,8 @@ Is Customer is Risky or Not Risky ?
 
 Membres
 ------------
-- Amoin Famien Le Roi
-- Ngueyap Nguikam Godelieve
+- Amoin Famien Le Roi(DE1)
+- Ngueyap Nguikam Godelieve(DE2)
 
 
 Project Organization
