@@ -1,7 +1,14 @@
 projetData
 ==============================
 
-A short description of the project.
+Credit Risk Classification Dataset
+Is Customer is Risky or Not Risky ?
+
+Membres
+------------
+- Amoin Famien Le Roi
+- Ngueyap Nguikam Godelieve
+
 
 Project Organization
 ------------
