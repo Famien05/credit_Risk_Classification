@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>src.models package &#8212; Credit_Risk_Classification 1.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test_environment module" href="test_environment.html" />
+    <link rel="prev" title="src package" href="src.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="src-models-package">
+<h1>src.models package<a class="headerlink" href="#src-models-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-src.models.app">
+<span id="src-models-app-module"></span><h2>src.models.app module<a class="headerlink" href="#module-src.models.app" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.app.flask_predict">
+<span class="sig-prename descclassname"><span class="pre">src.models.app.</span></span><span class="sig-name descname"><span class="pre">flask_predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.models.app.flask_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function handles the prediction process. It accepts parameters from the URL query string:</p>
+<p>train_path: file path of the training data (default: src/data/application_train.csv)
+test_path: file path of the test data (default: src/data/application_tEST.csv)
+seed: seed for the random number generator (default: 123)
+n_jobs: number of parallel jobs to run (default: -1)
+gamma: minimum loss reduction required to make a further partition on a leaf node of the tree (default: 0.3)
+learning_rate: step size shrinkage used in update to prevents overfitting (default: 0.1)
+base_score: the initial prediction score of all instances (default: 0.2)
+reg_alpha: L1 regularization term on weights (default: 1)
+reg_lambda: L2 regularization term on weights (default: 0.5)
+booster: type of model to use (default: ‘gbtree’)
+eval_metric: evaluation metric to use (default: ‘mlogloss’)
+It calls the predict() function with these parameters and returns the prediction result to the prediction.html template.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.app.predict">
+<span class="sig-prename descclassname"><span class="pre">src.models.app.</span></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">booster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_metric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.app.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict target values for test data using a trained model.</p>
+<dl class="simple">
+<dt>train_path<span class="classifier">str</span></dt><dd><p>Path to training data file.</p>
+</dd>
+<dt>test_path<span class="classifier">str</span></dt><dd><p>Path to test data file.</p>
+</dd>
+<dt>seed<span class="classifier">int</span></dt><dd><p>Seed for random number generation.</p>
+</dd>
+<dt>n_jobs<span class="classifier">int</span></dt><dd><p>Number of parallel jobs to run.</p>
+</dd>
+<dt>gamma<span class="classifier">float</span></dt><dd><p>Minimum loss reduction required to make a further partition on a leaf node of the tree.</p>
+</dd>
+<dt>learning_rate<span class="classifier">float</span></dt><dd><p>Step size shrinkage used in update to prevents overfitting.</p>
+</dd>
+<dt>base_score<span class="classifier">float</span></dt><dd><p>The initial prediction score of all instances, global bias.</p>
+</dd>
+<dt>reg_alpha<span class="classifier">float</span></dt><dd><p>L1 regularization term on weights.</p>
+</dd>
+<dt>reg_lambda<span class="classifier">float</span></dt><dd><p>L2 regularization term on weights.</p>
+</dd>
+<dt>booster<span class="classifier">str</span></dt><dd><p>Booster type to use, either gbtree, gblinear or dart.</p>
+</dd>
+<dt>eval_metric<span class="classifier">str</span></dt><dd><p>Evaluation metric to use for early stopping.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>y_pred<span class="classifier">numpy ndarray</span></dt><dd><p>Predicted target values for test data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.app.predict_model">
+<span class="sig-prename descclassname"><span class="pre">src.models.app.</span></span><span class="sig-name descname"><span class="pre">predict_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.app.predict_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict target values for X_test using the trained model.</p>
+<dl class="simple">
+<dt>model<span class="classifier">object</span></dt><dd><p>The trained model.</p>
+</dd>
+<dt>X_test<span class="classifier">pandas dataframe</span></dt><dd><p>Test data with features.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>y_pred<span class="classifier">numpy ndarray</span></dt><dd><p>Predicted target values for X_test.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.models.dataPrep">
+<span id="src-models-dataprep-module"></span><h2>src.models.dataPrep module<a class="headerlink" href="#module-src.models.dataPrep" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.dataPrep.dataPrep">
+<span class="sig-prename descclassname"><span class="pre">src.models.dataPrep.</span></span><span class="sig-name descname"><span class="pre">dataPrep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chemin1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chemin2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.dataPrep.dataPrep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans the train and test data by handling missing values and removing duplicate rows.</p>
+<p>Inputs:
+- train_data: pandas DataFrame, the training data to be cleaned.
+- test_data: pandas DataFrame, the testing data to be cleaned.</p>
+<p>Outputs:
+- Tuple of two pandas DataFrames: (train_data, test_data) where
+- train_data: pandas DataFrame, the cleaned training data.
+- test_data: pandas DataFrame, the cleaned testing data.</p>
+<p>Algorithm:
+1. Check for missing values in the data and drop columns with more than 40% of missing values.
+2. Check for duplicate rows in the train data and drop them.
+3. Return the cleaned training and testing data.</p>
+</dd></dl>
+
+</section>
+<section id="module-src.models.featureEng">
+<span id="src-models-featureeng-module"></span><h2>src.models.featureEng module<a class="headerlink" href="#module-src.models.featureEng" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.featureEng.featureEng">
+<span class="sig-prename descclassname"><span class="pre">src.models.featureEng.</span></span><span class="sig-name descname"><span class="pre">featureEng</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.featureEng.featureEng" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function performs feature engineering on a training dataset by performing the following steps:
+1. Categorizing columns based on data type:
+- categorical
+- discrete numerical
+- continuous numerical
+2. Handling missing values by imputing missing values based on the following strategies:
+- categorical: ‘most_frequent’
+- discrete numerical: ‘most_frequent’
+- continuous numerical: ‘median’
+3. One-hot encoding for categorical variables
+4. Correlation analysis and feature selection for target variable (if present in the dataset)</p>
+<p>less
+Copy code
+Parameters:
+train_data : pd.DataFrame</p>
+<blockquote>
+<div><p>The training dataset to be transformed.</p>
+</div></blockquote>
+<p>Returns:
+X : pd.DataFrame</p>
+<blockquote>
+<div><p>The feature matrix after transformations.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>y<span class="classifier">pd.Series</span></dt><dd><p>The target variable (if present in the dataset).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.models.train_model">
+<span id="src-models-train-model-module"></span><h2>src.models.train_model module<a class="headerlink" href="#module-src.models.train_model" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.train_model.train_model">
+<span class="sig-prename descclassname"><span class="pre">src.models.train_model.</span></span><span class="sig-name descname"><span class="pre">train_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_lambda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">booster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_metric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.train_model.train_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function trains an XGBoost model using the input features <cite>X</cite> and labels <cite>y</cite>. The model is trained using the specified hyperparameters and evaluated using accuracy, precision, recall, and F1 score. The trained model, along with the hyperparameters and evaluation metrics, are logged to MLflow for tracking and comparison purposes.</p>
+<p>Parameters:
+- X (pandas.DataFrame or numpy.ndarray): Input features for the model
+- y (pandas.Series or numpy.ndarray): Labels for the model
+- seed (int): Seed used for random number generation
+- n_jobs (int): Number of parallel jobs to run (default=1)
+- gamma (float): Minimum loss reduction required to make a further partition on a leaf node of the tree
+- learning_rate (float): Step size shrinkage used in updates to prevent overfitting
+- base_score (float): The initial prediction score of all instances, global bias
+- reg_alpha (float): L1 regularization term on weights
+- reg_lambda (float): L2 regularization term on weights
+- booster (str): Specifies which booster to use: gbtree, gblinear or dart
+- eval_metric (str): Evaluation metric(s) to be used for early stopping</p>
+<p>Returns:
+- model (xgboost.Booster or xgboost.XGBClassifier): Trained XGBoost model
+- X (pandas.DataFrame or numpy.ndarray): Input features for the model</p>
+</dd></dl>
+
+</section>
+<section id="module-src.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.models" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Credit_Risk_Classification</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">credit_Risk_Classification</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html">src package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_environment.html">test_environment module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">credit_Risk_Classification</a><ul>
+  <li><a href="src.html">src package</a><ul>
+      <li>Previous: <a href="src.html" title="previous chapter">src package</a></li>
+      <li>Next: <a href="test_environment.html" title="next chapter">test_environment module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Amoin Famien Le Roi AND Ngueyap Nguikam Godelieve.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/src.models.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
